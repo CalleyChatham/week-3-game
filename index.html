@@ -2,23 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>    
     <script src="assets/javascript/game.js"></script>
     <title>index</title>
 
   </head>
-  <body>
+
+  <body style="padding-top: 50px;">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><img class="img-responsive" src="assets/images/Romcomhangman.png" alt="Romcomhangman" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="container">
+    
+    <!-- <p>Secret: <span id="secret" style="letter-spacing: 9px;"></span></p> -->
+
+
+    <p>Scoreboard: <span id="scoreboard" style="letter-spacing: 9px;" class="val"></span></p>
+    
+    <p>Guesses Remaining: <span id="guessesRemaining" class="val"></span></p>
+
+    <div>Past Guesses <span id="pastGuesses" class="val"></span></div> 
+
+    <div id="win" style="display: none;">
+      <h2>You did it!</h2>
+      <a href="" class="restart">Play again?</a>
+    </div>
+
+    <div id="lose" style="display: none;">
+      <h2>Game over :(</h2>
+      <a href="" class="restart">Try again?</a>
+    </div>    
+
+  </div>
+
+
   	
-  	<!-- <div class="container">
-  		<div class="row">
-  			<div class="col-md-12">
-  				<div class="page-header">
-  				<img src="assets/images/Romcomhangman.png"/>
-  				</div>
-  			</div>
-  		</div>
-  	</div> -->
+ 
 
 
   </body>
+
 </html>

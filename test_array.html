@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arrays</title>
+</head>
+<body>
+
+<div id="romanticComedies"></div>
+
+<script type="text/javascript">
+
+// var Game = {
+// 	movies: [
+// 		'Two Weeks Notice', 
+// 		'The Proposal', 
+// 		'Sleepless in Seattle',
+// 		'When Harry Met Sally',
+// 		'Ten Things I Hate About You',
+// 		'Pretty Woman',
+// 		'Notting Hill',
+// 		'While You Were Sleeping'
+// 	],
+// 	updateUI: function(){
+// 		this.movies
+// 	},
+// 	start: function(){
+
+// 	}
+// };
+
+
+
+var movies = [
+'Two Weeks Notice', 
+'The Proposal', 
+'Sleepless in Seattle',
+'When Harry Met Sally',
+'Ten Things I Hate About You',
+'Pretty Woman',
+'Notting Hill',
+'While You Were Sleeping',
+];
+
+var guessesStart = 5;
+var previousGuesses = [];
+
+//now we need to pick a movie
+var movie = movies[Math.floor(Math.random() * movies.length)];
+
+//now that we have a movie, we need to prepare it for the game
+//make the movie name an array
+var movieName = [];
+
+//the array for the display ("Big" starts of as ['B', 'i', 'g']);
+var movieDisplay = [];
+
+for (var i = movie.length - 1; i >= 0; i--) {
+	if(movie[i] === " "){
+		movieName.unshift(" ");
+		movieDisplay.unshift(" ");			
+	} else {
+		movieName.unshift(movie[i]);
+		movieDisplay.unshift("_");			
+	}
+}
+
+//function for updating the ui
+function updateUI(){
+	var displayThis = guessArray.join("");
+	var displayPastGuesses = previousGuesses.toString;
+	$('#scoreboard').html(displayThis);
+	$('#guessesRemaining').html(guessesLeft);
+	$('#pastGuesses').html(displayPastGuesses);
+}
+
+function keyPressed(key){
+	//check if already guessed
+	for (var i = previousGuesses.length - 1; i >= 0; i--) {
+		if(previousGuesses[i] == key){
+			return false;
+		}
+	}
+
+	//start assuming no hit
+	var hit = false;
+	
+	//loop through movie name array and check for hit
+	for (var i = movieName.length - 1; i >= 0; i--) {
+		if(movieName[i] == key){
+			//if hit, update movie display array
+			hit = true;
+			movieDisplay[i] = key;
+		}
+	}
+
+	// if no hit after looping though the movie name, then subtract
+	// a guess and add the letter to previous guesses.
+	if(hit == false){
+		previousGuesses.push(key);
+	}
+
+	//all done, update the user interface
+	updateUI();
+
+	//End of game?
+
+	if(previousGuesses.length >= guessesStart){
+		alert('Game over');
+	}
+
+	//see if we've solved the puzzle
+	if(guessArray.join == movieName.join){
+		alert('You did it!');
+	}
+
+}
+
+</script>
+
+</body>
+</html>
