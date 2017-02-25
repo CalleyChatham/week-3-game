@@ -5,52 +5,51 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
     <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>    
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>    
     <script src="assets/javascript/game.js"></script>
     <title>index</title>
 
   </head>
-
-  <body style="padding-top: 50px;">
-
     <div class="container">
-      <div class="row">
-        <div class="col-md-12"><img class="img-responsive" src="assets/images/Romcomhangman.png" alt="Romcomhangman" /></div>
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-12"><img class="img-responsive" src="assets/images/Romcomhangman.png" alt="Romcomhangman" /></div>
+        </div>
+      
+    <div class="row">
+      <div class="col-md-4">  
+      <!-- <div id= "win"> -->
+        <img class="img-responsive" src="http://placehold.it/350x350">
+      </div>
+      
+      <div class="col-md-8">
+    
+    <!-- <p>Secret: <span id="secret" style="letter-spacing: 9px;"></span></p> -->
+        <h1>Press any key to start!</h1>
+
+        <p>Movie Title: <span id="scoreboard" style="letter-spacing: 9px;" class="val"></span></p>
+    
+        <p>Guesses Remaining: <span id="guessesRemaining" class="val"></span></p>
+
+        <p>Past Guesses: <span id="pastGuesses" class="val"></span></p> 
+
+        <div id="win" style="display: none;">
+        <!-- <h2>You guessed it!</h2> -->
+        <button type="button" class="btn"><a href="" class="restart">You're Lucky in Love!</a></button>
+        </div>
+
+        <div id="lose" style="display: none;">
+      <!-- <h>Heartbreak!</h> -->
+        <button type="button" class="btn"><a href="" class="restart">Click for Your 2nd Chance at Love</a></button>
+        </div>  
+    
+        </div>
+    
           </div>
         </div>
       </div>
-    </div>
-  
-  <div class="container">
-    
-    <!-- <p>Secret: <span id="secret" style="letter-spacing: 9px;"></span></p> -->
-
-
-    <p>Scoreboard: <span id="scoreboard" style="letter-spacing: 9px;" class="val"></span></p>
-    
-    <p>Guesses Remaining: <span id="guessesRemaining" class="val"></span></p>
-
-    <div>Past Guesses <span id="pastGuesses" class="val"></span></div> 
-
-    <div id="win" style="display: none;">
-      <h2>You did it!</h2>
-      <a href="" class="restart">Play again?</a>
-    </div>
-
-    <div id="lose" style="display: none;">
-      <h2>Game over :(</h2>
-      <a href="" class="restart">Try again?</a>
-    </div>    
-
-  </div>
-
-
-  	
- 
-
 
   </body>
-
 </html>

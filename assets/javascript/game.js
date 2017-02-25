@@ -9,14 +9,14 @@ $(document).ready(function() {
 	var movie, movieName, movieDisplay;
 
 	var movies = [
-		{title: "Two Weeks Notice", imgUrl: 'http:/asdasdasd'},
-		{title: "The Proposal", imgUrl: 'http:/asdasdasd'},
-		{title: "Sleepless in Seattle", imgUrl: 'http:/asdasdasd'},
-		{title: "When Harry Met Sally", imgUrl: 'http:/asdasdasd'},
-		{title: "Ten Things I Hate About You", imgUrl: 'http:/asdasdasd'},
-		{title: "Pretty Woman", imgUrl: 'http:/asdasdasd'},
-		{title: "Notting Hill", imgUrl: 'http:/asdasdasd'},
-		{title: "While You Were Sleeping", imgUrl: 'http:/asdasdasd'},
+		{title: "Two Weeks Notice", imgUrl: 'http://www.shemazing.net/wp-content/uploads/2015/04/sandra.gif'},
+		{title: "The Proposal", imgUrl: 'https://s-media-cache-ak0.pinimg.com/originals/4e/d8/e2/4ed8e215314a63b66238c4f3e831de35.gif'},
+		{title: "Sleepless in Seattle", imgUrl: 'http://nerdist.com/wp-content/uploads/2015/03/cordenhanks-3-03242015.gif'},
+		{title: "When Harry Met Sally", imgUrl: 'https://media.giphy.com/media/DPrIeZ0McEG1q/giphy.gif'},
+		{title: "Ten Things I Hate About You", imgUrl: 'http://cdn3.teen.com/wp-content/uploads/2014/02/10-Things-I-Hate-About-You.gif'},
+		{title: "Pretty Woman", imgUrl: 'http://cdn4.teen.com/wp-content/uploads/2015/03/Pretty-Woman.gif'},
+		{title: "Notting Hill", imgUrl: 'https://s-media-cache-ak0.pinimg.com/736x/98/cd/70/98cd701be53b466f38e252ba2201cade.jpg'},
+		{title: "While You Were Sleeping", imgUrl: 'http://topyaps.com/wp-content/uploads/2015/11/Pants-tearing.gif'},
 	];
 
 	function initGame(){
@@ -98,6 +98,7 @@ $(document).ready(function() {
 		if(movieDisplay.join("") == movieName.join("")){
 			$('#win').show();
 		}
+
 	}
 
 	//INIT game
