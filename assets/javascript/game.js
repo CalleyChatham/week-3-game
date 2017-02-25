@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var guessesStart = 5;
 	var previousGuesses = [];
 	var movie, movieName, movieDisplay;
+	var currentMovie = "";
 
 	var movies = [
 		{title: "Two Weeks Notice", imgUrl: 'http://www.shemazing.net/wp-content/uploads/2015/04/sandra.gif'},
@@ -24,8 +25,10 @@ $(document).ready(function() {
 		$('.val').html("");
 
 		//now we need to pick a movie
-		movie = movies[Math.floor(Math.random() * movies.length)];
+		currentMovie = Math.floor(Math.random() * movies.length);
+		movie = movies[currentMovie];
 		movie.title = movie.title.toUpperCase();
+
 
 		//now that we have a movie, we need to prepare it for the game
 		//make the movie name an array
@@ -54,7 +57,7 @@ $(document).ready(function() {
 		$('#scoreboard').html(displayThis);
 		$('#guessesRemaining').html(guessesStart - previousGuesses.length);
 		$('#pastGuesses').html(displayPastGuesses);
-		// $("#secret").html(movieName.join(""));
+		$("#secret").html(movieName.join(""));
 	}
 
 	function keyPressed(key){
@@ -97,6 +100,8 @@ $(document).ready(function() {
 		//Did we win?
 		if(movieDisplay.join("") == movieName.join("")){
 			$('#win').show();
+			$('.film-image').attr("src",movies[currentMovie].imgUrl);
+			console.log (movies)
 		}
 
 	}
